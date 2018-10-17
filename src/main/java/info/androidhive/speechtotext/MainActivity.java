@@ -79,46 +79,10 @@ public class MainActivity extends Activity {
 			public void onClick(View v){
 
                 txtSpeechInput.setText("HTTP Button Pressed");
-//				txtSpeechInput.setText("Rush B!")
-//                StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
-//                        new Response.Listener<String>() {
-//                            @Override
-//                            public void onResponse(String response) {
-//								//txtSpeechInput.setText("Response is: "+ response.substring(0,500));
-//
-//                            }
-//                        }, new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//                        //txtSpeechInput.setText(error.toString());
-//                }
-//                })
-//				{
-//                    protected Map<String, String> getParams() {
-//                        MyData = new HashMap<String, String>();
-//                        MyData.put("command", command);
-//                        return MyData;
-//                    }
-//                };
-//
-//                queue.add(stringRequest);
-//                new SendPostRequest().execute();
-//                StringRequest stringRequest1 = new StringRequest(Request.Method.GET, url,
-//                        new Response.Listener<String>() {
-//                            @Override
-//                            public void onResponse(String response) {
-//                                // Display the first 500 characters of the response string.
-//                                txtSpeechInput.setText("Response is: "+ response.substring(0,500));
-//                            }
-//                        }, new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//                        txtSpeechInput.setText(error.toString());
-//                    }
-//                });
-//                queue.add(stringRequest1);
 
-//                }
+
+                new SendPostRequest().execute();
+
 
 			}
 		});
@@ -212,7 +176,7 @@ public class MainActivity extends Activity {
 
 		@Override
 		protected void onPostExecute(String result) {
-			//txtSpeechInput.setText(respmsg);
+			txtSpeechInput.setText(respmsg);
 		}
 
 
